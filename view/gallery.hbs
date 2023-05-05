@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href=" /static/css/style.css" ; <title>gallery</title>
+</head>
+
+<body>
+
+  {{!-- Navebar section --}}
+  {{> navbar data=details}}
+
+  {{!-- Galery section --}}
+
+  <section class="gallery_section ">
+    <div class="container text-center">
+      <h1 class="text-warning">Gallery</h1>
+      <div class="row  mt-5 py-4">
+        {{#each gallerydata}}
+        <div class="col-md-3 py-3">
+          <div class="card" style="width: 18rem;">
+            <img src={{this.imgUrl}} class="card-img-top gallery_img" alt="...">
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+
+  </section>
+
+
+  {{!-- footer_section --}}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
